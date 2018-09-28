@@ -3,7 +3,7 @@
    <soapenv:Header/>
    <soapenv:Body>
       <spel:CheckTextRequest lang="EN" options="0" format="">
-         <spel:text>aplication</spel:text>
+         <spel:text>glases</spel:text>
       </spel:CheckTextRequest>
    </soapenv:Body>
 </soapenv:Envelope>
