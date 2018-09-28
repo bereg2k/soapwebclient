@@ -28,7 +28,8 @@ public class Base {
      */
     public static void main(String[] args) throws Throwable{
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        String url = "http://speller.yandex.net/services/spellservice/checkText";
+        String urlRemote = "http://speller.yandex.net/services/spellservice/checkText";
+        //String urlLocalStub = "http://apl-satellite1:8080/YaSpellerWSStub/SpellService";
         File file = new File("checkTextRequest.xml");
         Scanner sc = new Scanner(file);
         String str = null;
@@ -40,7 +41,7 @@ public class Base {
             }
         }
 
-        HttpPost httpPost = new HttpPost(url);
+        HttpPost httpPost = new HttpPost(urlRemote);
         httpPost.addHeader("SOAPAction", "http://speller.yandex.net/services/spellservice");
         httpPost.addHeader("Content-Type", "text/xml");
         httpPost.setEntity(new StringEntity(str));
